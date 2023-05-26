@@ -1,5 +1,4 @@
-import "../styles/globals.css";
-// include styles from the ui package
+import "../globals.css";
 import "ui/styles.css";
 
 export default function RootLayout({
