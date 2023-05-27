@@ -1,25 +1,19 @@
 import { Metadata } from "next";
-import {
-  SessionDataViewer,
-  SignInButton,
-  SignOutButton,
-} from "@/components/auth";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/libs/auth";
+import { Suspense, lazy } from "react";
+import dynamic from "next/dynamic";
 
 export const metadata: Metadata = {
   title: "Web - Turborepo Example",
 };
 
-export default async function Home() {
-  const session = await getServerSession(authOptions);
+const SignInForm = dynamic(() => import("@/components/SignInForm"));
 
+export default function Home<NextPage>() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <SignInButton />
-      <SignOutButton />
-      <SessionDataViewer />
-      <p className="">{session?.user?.email}</p>
+    <div className="flex justify-center items-center h-full bg-gradient-to-t from-blue-100 to-cyan-100">
+      <Suspense>
+        <SignInForm />
+      </Suspense>
     </div>
   );
 }

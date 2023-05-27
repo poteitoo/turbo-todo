@@ -1,6 +1,7 @@
 import "./globals.css";
 import { NextAuthProvider } from "@/components/auth";
 import { Inter } from "next/font/google";
+import { twMerge } from "tailwind-merge";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <NextAuthProvider>
-        <body className={inter.className}>{children}</body>
-      </NextAuthProvider>
+      <head />
+      <body className={twMerge(inter.className, "h-screen")}>
+        <NextAuthProvider>{children}</NextAuthProvider>
+      </body>
     </html>
   );
 }
