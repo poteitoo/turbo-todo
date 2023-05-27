@@ -9,6 +9,7 @@
     "vscode": {
       "settings": {
         "files.exclude": {
+          "**/next-env.d.ts": true,
           "**/node_modules": true,
           "**/dist": true,
           "**/.next": true,
