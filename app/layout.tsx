@@ -1,5 +1,5 @@
 import "./globals.css";
-import { NextAuthProvider } from "@/components/auth";
+import { NextAuthProvider } from "@/modules/Auth";
 import { Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 

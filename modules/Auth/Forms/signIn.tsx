@@ -2,7 +2,7 @@
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { useForm } from "react-hook-form";
 
-type FortType = {
+export type SignInFormType = {
   username: string;
   password: string;
   remember: boolean;
@@ -12,9 +12,8 @@ export const SignInForm = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
-  } = useForm<FortType>({
+  } = useForm<SignInFormType>({
     defaultValues: {
       remember: false,
     },
@@ -45,7 +44,7 @@ export const SignInForm = () => {
           {...register("username", { required: true })}
         />
         {errors.username && (
-          <p className="text-red-600 font-semibold mt-1">
+          <p className="text-red-600 font-medium mt-1">
             ユーザー名を入力してください
           </p>
         )}
@@ -64,7 +63,7 @@ export const SignInForm = () => {
           {...register("password", { required: true })}
         />
         {errors.password && (
-          <p className="text-red-600 font-semibold mt-1">
+          <p className="text-red-600 font-medium mt-1">
             パスワードを入力してください
           </p>
         )}
@@ -88,10 +87,8 @@ export const SignInForm = () => {
         Sign In
       </button>
       {errors.root && (
-        <p className="text-red-600 font-semibold">{errors.root.message}</p>
+        <p className="text-red-600 font-medium">{errors.root.message}</p>
       )}
     </form>
   );
 };
-
-export default SignInForm;
