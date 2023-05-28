@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head />
-      <body className={twMerge(inter.className, "h-screen")}>
+      <body className={twMerge(inter.className, "h-screen overflow-hidden")}>
         <NextAuthProvider>{children}</NextAuthProvider>
       </body>
     </html>
