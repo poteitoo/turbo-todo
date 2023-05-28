@@ -14,8 +14,8 @@
 		"clean": "rm -rf node_modules .svelte-kit",
 		"format": "prettier --plugin-search-dir . --write .",
 		"db:generate": "prisma generate",
-		"migrate:dev": "dotenv -e .env.local npx prisma migrate dev",
-		"studio": "dotenv -e .env.local prisma studio"
+		"migrate:dev": "npx prisma migrate dev",
+		"studio": "prisma studio"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -29,13 +29,13 @@
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.14",
 		"daisyui": "^2.51.6",
-		"dotenv-cli": "^7.2.1",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.26.0",
 		"postcss": "^8.4.24",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
+		"prettier-plugin-tailwindcss": "^0.3.0",
 		"prisma": "^4.14.1",
 		"svelte": "^3.54.0",
 		"svelte-check": "^3.0.1",

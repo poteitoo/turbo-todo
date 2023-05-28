@@ -1,6 +1,5 @@
 <script>
 	import { signIn } from '@auth/sveltekit/client';
-	// import { page } from '$app/stores';
 </script>
 
 <div class="full bg-gradient-blue flex items-center justify-center">
@@ -15,7 +14,6 @@
 			}}
 		>
 			<h2 class="text-xl font-bold">Sign in to your account</h2>
-			<!-- <input type="hidden" name="csrfToken" /> -->
 			<!-- {/* email */} -->
 			<div>
 				<label for="email" class="mb-1 block font-semibold"> Email </label>

@@ -6,9 +6,9 @@ export default {
 		require('@tailwindcss/typography'),
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/aspect-ratio'),
-		require('daisyui')
+		require('daisyui'),
 	],
 	daisyui: {
-		themes: ['light']
-	}
+		themes: ['light'],
+	},
 };

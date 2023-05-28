@@ -6,7 +6,7 @@ import {
 	EMAIL_SERVER_PORT,
 	EMAIL_SERVER_USER,
 	GITHUB_ID,
-	GITHUB_SECRET
+	GITHUB_SECRET,
 } from '$env/static/private';
 import GitHub from '@auth/core/providers/github';
 import EmailProvider from '@auth/core/providers/email';
@@ -29,11 +29,11 @@ export const handle = SvelteKitAuth({
 				port: EMAIL_SERVER_PORT,
 				auth: {
 					user: EMAIL_SERVER_USER,
-					pass: EMAIL_SERVER_PASSWORD
-				}
+					pass: EMAIL_SERVER_PASSWORD,
+				},
 			},
-			from: EMAIL_FROM
-		})
+			from: EMAIL_FROM,
+		}),
 	],
 	callbacks: {
 		async signIn({ user, account, profile, email }) {
@@ -43,6 +43,6 @@ export const handle = SvelteKitAuth({
 		},
 		async redirect({ url, baseUrl }) {
 			return baseUrl;
-		}
-	}
+		},
+	},
 });
