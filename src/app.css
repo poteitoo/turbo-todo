@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .bg-gradient-blue {
-  @apply bg-gradient-to-t from-blue-100 to-cyan-100;
+	@apply bg-gradient-to-t from-blue-100 to-cyan-100;
 }
 
 .full {
-  @apply h-full w-full;
+	@apply h-full w-full;
 }
