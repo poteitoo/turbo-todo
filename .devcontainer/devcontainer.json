@@ -23,7 +23,9 @@
 				"bradlc.vscode-tailwindcss",
 				"Prisma.prisma",
 				"mhutchie.git-graph",
-				"svelte.svelte-vscode"
+				"svelte.svelte-vscode",
+				"ms-playwright.playwright",
+				"antfu.vite"
 			]
 		}
 	}
