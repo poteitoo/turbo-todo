@@ -30,23 +30,23 @@ export const SignInForm = () => {
   if (!mounted) return null;
 
   return (
-    <div className="card card-compact glass w-96 rounded-md shadow-md p-8 pt-6 mb-4">
+    <div className="card glass card-compact mb-4 w-96 rounded-md p-8 pt-6 shadow-md">
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
-        <h2 className="font-bold text-xl">Sign in to your account</h2>
+        <h2 className="text-xl font-bold">Sign in to your account</h2>
         {/* email */}
         <div>
-          <label htmlFor="email" className="block mb-1 font-semibold">
+          <label htmlFor="email" className="mb-1 block font-semibold">
             Email
           </label>
           <input
             type="email"
-            className="input input-bordered w-full"
+            className="input-bordered input w-full"
             placeholder="poepoe"
             id="email"
             {...register("email", { required: true })}
           />
           {errors.email && (
-            <p className="text-red-600 font-medium mt-1">
+            <p className="mt-1 font-medium text-red-600">
               メールアドレスを入力してください
             </p>
           )}
@@ -57,7 +57,7 @@ export const SignInForm = () => {
           Sign In
         </button>
         {errors.root && (
-          <p className="text-red-600 font-medium">{errors.root.message}</p>
+          <p className="font-medium text-red-600">{errors.root.message}</p>
         )}
       </form>
 

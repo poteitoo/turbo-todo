@@ -3,18 +3,18 @@ import type { ReactNode } from "react";
 
 export default async function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="drawer drawer-mobile full bg-gradient-blue">
+    <div className="full bg-gradient-blue drawer-mobile drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col p-5 md:pl-0">
         {/* <!-- Navbar --> */}
-        <div className="w-full navbar bg-base-100 rounded-md shadow-md">
+        <div className="navbar w-full rounded-md bg-base-100 shadow-md">
           <div className="flex-none lg:hidden">
-            <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
+            <label htmlFor="my-drawer-3" className="btn-ghost btn-square btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block w-6 h-6 stroke-current"
+                className="inline-block h-6 w-6 stroke-current"
               >
                 <path
                   strokeLinecap="round"
@@ -25,8 +25,8 @@ export default async function Layout({ children }: { children: ReactNode }) {
               </svg>
             </label>
           </div>
-          <div className="flex-1 px-2 mx-2">Navbar Title</div>
-          <div className="flex-none hidden lg:block">
+          <div className="mx-2 flex-1 px-2">Navbar Title</div>
+          <div className="hidden flex-none lg:block">
             <ul className="menu menu-horizontal">
               {/* <!-- Navbar menu content here --> */}
               <li>
@@ -43,7 +43,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
       </div>
       <div className="drawer-side md:m-5">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 bg-base-100 rounded-md shadow-md">
+        <ul className="menu w-80 rounded-md bg-base-100 p-4 shadow-md">
           {/* <!-- Sidebar content here --> */}
           <li>
             <Link href="/dashboard">Sidebar Item 1</Link>

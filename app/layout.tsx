@@ -1,7 +1,7 @@
-import "./globals.css";
 import { NextAuthProvider } from "@/modules/Auth";
 import { Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

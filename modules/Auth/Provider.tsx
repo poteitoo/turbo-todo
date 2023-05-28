@@ -1,5 +1,5 @@
 "use client";
-import { useSession, SessionProvider } from "next-auth/react";
+import { SessionProvider, useSession } from "next-auth/react";
 
 export const SessionDataViewer = () => {
   const { data } = useSession();
